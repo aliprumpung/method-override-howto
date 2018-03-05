@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+</head>
+<body>
+
+{% for product in products %}
+<li>
+	{{ product.name }}
+	<form method="POST" action="/{{product.id}}?_method=DELETE">
+	<button type="submit">Delete</button>
+	</form>
+</li>
+
+{% endfor %}
+
+
+</body>
+</html>
